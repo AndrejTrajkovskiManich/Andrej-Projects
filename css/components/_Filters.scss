@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+#checkbox {
+  display: flex;
+  label {
+    border-left: 1px solid gray;
+    background-color: var.$background-color-secondary;
+    color: white;
+    padding: 20px 40px;
+    width: 33.333%;
+    display: flex;
+    justify-content: space-between;
+  }
+  input {
+    display: none;
+  }
+  i {
+    display: flex;
+    align-self: center;
+    color: var.$background-color-secondary;
+    font-size: 30px;
+  }
+  :hover {
+    background-color: var.$button-color;
+    @extend %boldtext;
+  }
+}

@@ -1,0 +1,11 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+main{background-color: var.$background-color-slightly-darker;
+    h1{
+        text-align: center;
+        padding: 150px;
+    }
+    
+}

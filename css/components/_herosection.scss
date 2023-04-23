@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+#herosection {
+  background: rgba(0, 0, 0, 0.3) url(../img/stairs.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  background-position-y: 70%;
+  background-blend-mode: darken;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    color: var.$text-color-primary;
+    font-size: 80px;
+  }
+}

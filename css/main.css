@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0.9375rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 3.75rem;
+}
+@media (max-width: 425px) {
+  h1 {
+    font-size: 2.75rem;
+  }
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1.75rem;
+}
+@media (max-width: 425px) {
+  h2 {
+    font-size: 1.5625rem;
+  }
+}
+
+h3 {
+  font-size: 1.5625rem;
+}
+@media (max-width: 425px) {
+  h3 {
+    font-size: 1.25rem;
+  }
+}
+
+#cards .Card-Wrapper .card .inner-card .card-text :last-of-type, #checkbox :hover, header .img p, header ul a {
+  color: black;
+  font-weight: bolder;
+}
+
+header {
+  background-color: #fcd232;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+}
+header .img {
+  text-align: center;
+  margin: 30px 0px 30px 30px;
+}
+header .img img {
+  height: 50px;
+  width: 50px;
+}
+header .img p {
+  text-transform: uppercase;
+}
+header ul {
+  display: flex;
+}
+header ul :not(:last-child) {
+  margin-right: 55px;
+}
+header ul a {
+  text-decoration: none;
+}
+header ul li {
+  list-style: none;
+}
+header .button {
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
+  background-color: #ff1300;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+header .fa-bars {
+  font-size: 30px;
+  color: black;
+  display: none;
+  pointer-events: none;
+}
+
+footer {
+  text-align: center;
+  background-color: #302f38;
+}
+footer p {
+  color: #fff;
+  padding: 10px 0px;
+}
+
+#herosection {
+  background: rgba(0, 0, 0, 0.3) url(../img/stairs.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  background-position-y: 70%;
+  background-blend-mode: darken;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#herosection h1 {
+  color: #fff;
+  font-size: 80px;
+}
+
+#checkbox {
+  display: flex;
+}
+#checkbox label {
+  border-left: 1px solid gray;
+  background-color: #302f38;
+  color: white;
+  padding: 20px 40px;
+  width: 33.333%;
+  display: flex;
+  justify-content: space-between;
+}
+#checkbox input {
+  display: none;
+}
+#checkbox i {
+  display: flex;
+  align-self: center;
+  color: #302f38;
+  font-size: 30px;
+}
+#checkbox :hover {
+  background-color: #ff1300;
+}
+
+#cards {
+  background-color: #fcd232;
+  padding: 0px 200px 200px;
+}
+#cards h2 {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 40px;
+  padding: 40px 0px;
+}
+#cards .Card-Wrapper {
+  margin-right: -20px;
+  margin-bottom: -20px;
+  flex-wrap: wrap;
+  display: flex;
+}
+#cards .Card-Wrapper .card {
+  width: 33.33%;
+}
+#cards .Card-Wrapper .card:hover {
+  transform: translateY(-15px);
+  scale: 1.02;
+}
+#cards .Card-Wrapper .card .inner-card {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+#cards .Card-Wrapper .card .inner-card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: block;
+}
+#cards .Card-Wrapper .card .inner-card .card-text {
+  padding: 20px;
+}
+#cards .Card-Wrapper .card .inner-card .card-text :not(:last-child) {
+  margin-bottom: 20px;
+}
+#cards .Card-Wrapper .card .inner-card .card-text .a {
+  display: flex;
+  justify-content: right;
+}
+#cards .Card-Wrapper .card .inner-card .card-text .a a {
+  text-decoration: none;
+  background-color: red;
+  padding: 10px 25px;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+}
+#cards .Card-Wrapper .card .inner-card .card-text .yellow-tag {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #fcd232;
+}
+
+main {
+  background-color: #f8cf31;
+}
+main h1 {
+  text-align: center;
+  padding: 150px;
+}/*# sourceMappingURL=main.css.map */
