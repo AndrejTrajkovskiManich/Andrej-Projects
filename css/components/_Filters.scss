@@ -4,6 +4,10 @@
 
 #checkbox {
   display: flex;
+  @include mix.tablet-styles {
+      flex-wrap: wrap;
+  
+    }
   label {
     border-left: 1px solid gray;
     background-color: var.$background-color-secondary;
@@ -12,6 +16,22 @@
     width: 33.333%;
     display: flex;
     justify-content: space-between;
+    gap:20px;
+    @include mix.tablet-styles {
+        width: 100%;
+      }
+             
+    @include mix.laptop-l-styles {
+        font-size: 13px;
+      }
+    
+      @include mix.laptop-s-styles {
+        font-size: 11px;
+      }
+            @include mix.tablet-styles {
+              font-size: 13px;
+      
+            }
   }
   input {
     display: none;
@@ -22,8 +42,10 @@
     color: var.$background-color-secondary;
     font-size: 30px;
   }
-  :hover {
+  .red {
     background-color: var.$button-color;
     @extend %boldtext;
   }
 }
+
+

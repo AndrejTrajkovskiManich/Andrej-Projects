@@ -2,10 +2,115 @@
 @use "../abstracts/mixins" as mix;
 @use "sass:math";
 
-main{background-color: var.$background-color-slightly-darker;
-    h1{
-        text-align: center;
-        padding: 150px;
+main {
+  background-color: var.$background-color-slightly-darker;
+  h1 {
+    text-align: center;
+    padding: 150px;
+    @include mix.tablet-styles {
+      padding: 50px;
     }
+    @include mix.tablet-l-styles {
+      padding: 50px;
+    }
+    @include mix.tablet-styles {
+      font-size: 50px;
+    }
+    @include mix.tablet-s-styles {
+      font-size: 40px;
+      padding: 20px;
+    }
+        @include mix.mobile-l-styles {
+          font-size: 35px;
+            padding: 10px;
+        }
+                @include mix.mobile-s-styles {
+                  font-size: 30px;
+                  padding: 10px;
+                }
+  }
+  form {
+    padding: 0 200px 200px 200px;
+    @include mix.laptop-s-styles {
+      padding: 0 100px 200px 100px;
+    }
+    @include mix.tablet-styles {
+      padding-bottom: 100px;
+    }
+    @include mix.tablet-l-styles {
+      padding: 0 50px 300px 50px;
+    }
+    @include mix.tablet-s-styles {
+      padding: 0 50px 200px 50px;
+    }
+        @include mix.mobile-l-styles {
+          padding: 0 20px 300px 20px;
+        }
+  }
+  option{
+    @extend %boldtext;
+  }
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  label {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    position: relative;
+    &:last-child {
+      align-self: flex-end;
+    }
+    @include mix.tablet-styles {
+      width: 100%;
+    }
+  }
+  input {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+  }
+  select {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+  }
+  .button {
+    background-color: var.$button-color;
+    color: white;
+  }
+    small {
+      position: absolute;
+      color: white;
+      visibility: hidden;
+      bottom: -20px;
+      left: 0;
+      font-size: 10px;
+    }
+    label.error input {
+      border: 2px solid #eb3b3b;
+  
+    }
+  
+        label.success input {
+      border: 2px solid #2ecc71;
+    }
+        label.error select {
+          border: 2px solid #eb3b3b;
     
+        }
+    
+        label.success select {
+          border: 2px solid #2ecc71;
+        }
+  
+    
+        label.error small {
+      visibility: visible;
+      color:#eb3b3b
+    }
 }

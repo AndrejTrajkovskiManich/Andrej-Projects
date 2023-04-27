@@ -65,7 +65,7 @@ h3 {
   }
 }
 
-#cards .Card-Wrapper .card .inner-card .card-text :last-of-type, #checkbox :hover, header .img p, header ul a {
+main option, #cards .Card-Wrapper .card .inner-card .card-text :last-of-type, #checkbox .red, header .img p, header .img a, header ul a {
   color: black;
   font-weight: bolder;
 }
@@ -77,23 +77,79 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0px 50px;
+  font-size: 15px;
+}
+@media (max-width: 1240px) {
+  header {
+    padding: 0px 10px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding: 0px 40px;
+  }
+}
+@media (max-width: 1440px) {
+  header {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1100px) {
+  header {
+    font-size: 11px;
+  }
 }
 header .img {
   text-align: center;
   margin: 30px 0px 30px 30px;
 }
+@media (max-width: 1440px) {
+  header .img {
+    margin: 30px 20px 30px 10px;
+  }
+}
+@media (max-width: 425px) {
+  header .img {
+    margin: 10px 10px 10px 0px;
+  }
+}
 header .img img {
   height: 50px;
   width: 50px;
 }
+@media (max-width: 425px) {
+  header .img img {
+    height: 40px;
+    width: 40px;
+  }
+}
 header .img p {
   text-transform: uppercase;
 }
+@media (max-width: 425px) {
+  header .img p {
+    font-size: 10px;
+  }
+}
+header .img a {
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+}
 header ul {
+  padding: 0px;
   display: flex;
 }
 header ul :not(:last-child) {
   margin-right: 55px;
+}
+@media (max-width: 1240px) {
+  header ul :not(:last-child) {
+    margin-right: 20px;
+  }
 }
 header ul a {
   text-decoration: none;
@@ -109,11 +165,25 @@ header .button {
   padding: 5px 15px;
   border-radius: 5px;
 }
-header .fa-bars {
+@media (max-width: 768px) {
+  header .button {
+    display: none;
+  }
+}
+header button {
+  border: none;
+  background-color: #fcd232;
+}
+header button .fa-bars {
   font-size: 30px;
   color: black;
   display: none;
   pointer-events: none;
+}
+@media (max-width: 768px) {
+  header button .fa-bars {
+    display: inline-block;
+  }
 }
 
 footer {
@@ -131,6 +201,7 @@ footer p {
   background-size: cover;
   height: 50vh;
   background-position-y: 70%;
+  background-position: center;
   background-blend-mode: darken;
   display: flex;
   align-items: center;
@@ -140,9 +211,24 @@ footer p {
   color: #fff;
   font-size: 80px;
 }
+@media (max-width: 768px) {
+  #herosection h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 425px) {
+  #herosection h1 {
+    font-size: 40px;
+  }
+}
 
 #checkbox {
   display: flex;
+}
+@media (max-width: 768px) {
+  #checkbox {
+    flex-wrap: wrap;
+  }
 }
 #checkbox label {
   border-left: 1px solid gray;
@@ -152,6 +238,27 @@ footer p {
   width: 33.333%;
   display: flex;
   justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  #checkbox label {
+    width: 100%;
+  }
+}
+@media (max-width: 1440px) {
+  #checkbox label {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1100px) {
+  #checkbox label {
+    font-size: 11px;
+  }
+}
+@media (max-width: 768px) {
+  #checkbox label {
+    font-size: 13px;
+  }
 }
 #checkbox input {
   display: none;
@@ -162,13 +269,33 @@ footer p {
   color: #302f38;
   font-size: 30px;
 }
-#checkbox :hover {
+#checkbox .red {
   background-color: #ff1300;
 }
 
 #cards {
   background-color: #fcd232;
-  padding: 0px 200px 200px;
+  padding: 0px 200px 100px 200px;
+}
+@media (max-width: 1100px) {
+  #cards {
+    padding: 0px 100px 100px 100px;
+  }
+}
+@media (max-width: 768px) {
+  #cards {
+    padding: 0px 75px 100px 75px;
+  }
+}
+@media (max-width: 576px) {
+  #cards {
+    padding: 0px 50px 70px 50px;
+  }
+}
+@media (max-width: 425px) {
+  #cards {
+    padding: 0px 20px 70px 20px;
+  }
 }
 #cards h2 {
   text-transform: capitalize;
@@ -183,7 +310,30 @@ footer p {
   display: flex;
 }
 #cards .Card-Wrapper .card {
+  display: none;
   width: 33.33%;
+}
+#cards .Card-Wrapper .card:nth-child(1) {
+  display: block;
+}
+#cards .Card-Wrapper .card:nth-child(2) {
+  display: block;
+}
+#cards .Card-Wrapper .card:nth-child(3) {
+  display: block;
+}
+#cards .Card-Wrapper .card:nth-child(4) {
+  display: block;
+}
+@media (max-width: 768px) {
+  #cards .Card-Wrapper .card {
+    width: 50%;
+  }
+}
+@media (max-width: 576px) {
+  #cards .Card-Wrapper .card {
+    width: 100%;
+  }
 }
 #cards .Card-Wrapper .card:hover {
   transform: translateY(-15px);
@@ -196,10 +346,30 @@ footer p {
   border-radius: 10px;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
+@media (max-width: 1440px) {
+  #cards .Card-Wrapper .card .inner-card {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1100px) {
+  #cards .Card-Wrapper .card .inner-card {
+    font-size: 11px;
+  }
+}
 #cards .Card-Wrapper .card .inner-card img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   display: block;
+}
+@media (max-width: 1440px) {
+  #cards .Card-Wrapper .card .inner-card h3 {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1100px) {
+  #cards .Card-Wrapper .card .inner-card h3 {
+    font-size: 13px;
+  }
 }
 #cards .Card-Wrapper .card .inner-card .card-text {
   padding: 20px;
@@ -207,23 +377,105 @@ footer p {
 #cards .Card-Wrapper .card .inner-card .card-text :not(:last-child) {
   margin-bottom: 20px;
 }
+@media (max-width: 1440px) {
+  #cards .Card-Wrapper .card .inner-card .card-text :not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 1100px) {
+  #cards .Card-Wrapper .card .inner-card .card-text :not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
 #cards .Card-Wrapper .card .inner-card .card-text .a {
   display: flex;
   justify-content: right;
 }
 #cards .Card-Wrapper .card .inner-card .card-text .a a {
   text-decoration: none;
-  background-color: red;
+  background-color: #ff1300;
   padding: 10px 25px;
   color: white;
   border-radius: 5px;
   margin-top: 20px;
   display: inline-block;
 }
+@media (max-width: 1440px) {
+  #cards .Card-Wrapper .card .inner-card .card-text .a a {
+    margin-top: 10px;
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 1100px) {
+  #cards .Card-Wrapper .card .inner-card .card-text .a a {
+    margin-top: 10px;
+    padding: 10px 15px;
+  }
+}
 #cards .Card-Wrapper .card .inner-card .card-text .yellow-tag {
   display: inline-block;
   padding: 5px 10px;
   background-color: #fcd232;
+}
+#cards #button {
+  padding: 15px;
+  width: 50%;
+  display: none;
+  border-radius: 5px;
+  border: none;
+  background-color: #ff1300;
+  color: white;
+  margin: 20px auto 0px auto;
+}
+@media (max-width: 768px) {
+  #cards #button {
+    display: block;
+  }
+}
+@media (max-width: 576px) {
+  #cards #button {
+    width: 70%;
+  }
+}
+
+#sidemenu {
+  background-color: #302f38;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease-out;
+  height: 100%;
+  overflow-x: hidden;
+  z-index: 1;
+  position: fixed;
+  width: 0;
+}
+#sidemenu .sidemenu {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+#sidemenu i {
+  font-size: 40px;
+  color: white;
+  align-self: flex-end;
+  margin-bottom: 40px;
+}
+#sidemenu a {
+  color: white;
+  text-decoration: none;
+  align-self: flex-start;
+}
+#sidemenu a:not(:last-child) {
+  margin-bottom: 30px;
+}
+#sidemenu .button {
+  padding: 10px 20px;
+  background-color: #ff1300;
+  align-self: flex-start;
+  border-radius: 5px;
+  font-size: 12px;
 }
 
 main {
@@ -232,4 +484,123 @@ main {
 main h1 {
   text-align: center;
   padding: 150px;
+}
+@media (max-width: 768px) {
+  main h1 {
+    padding: 50px;
+  }
+}
+@media (max-width: 910px) {
+  main h1 {
+    padding: 50px;
+  }
+}
+@media (max-width: 768px) {
+  main h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 576px) {
+  main h1 {
+    font-size: 40px;
+    padding: 20px;
+  }
+}
+@media (max-width: 425px) {
+  main h1 {
+    font-size: 35px;
+    padding: 10px;
+  }
+}
+@media (max-width: 320px) {
+  main h1 {
+    font-size: 30px;
+    padding: 10px;
+  }
+}
+main form {
+  padding: 0 200px 200px 200px;
+}
+@media (max-width: 1100px) {
+  main form {
+    padding: 0 100px 200px 100px;
+  }
+}
+@media (max-width: 768px) {
+  main form {
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 910px) {
+  main form {
+    padding: 0 50px 300px 50px;
+  }
+}
+@media (max-width: 576px) {
+  main form {
+    padding: 0 50px 200px 50px;
+  }
+}
+@media (max-width: 425px) {
+  main form {
+    padding: 0 20px 300px 20px;
+  }
+}
+main section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main label {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  position: relative;
+}
+main label:last-child {
+  align-self: flex-end;
+}
+@media (max-width: 768px) {
+  main label {
+    width: 100%;
+  }
+}
+main input {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+}
+main select {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+}
+main .button {
+  background-color: #ff1300;
+  color: white;
+}
+main small {
+  position: absolute;
+  color: white;
+  visibility: hidden;
+  bottom: -20px;
+  left: 0;
+  font-size: 10px;
+}
+main label.error input {
+  border: 2px solid #eb3b3b;
+}
+main label.success input {
+  border: 2px solid #2ecc71;
+}
+main label.error select {
+  border: 2px solid #eb3b3b;
+}
+main label.success select {
+  border: 2px solid #2ecc71;
+}
+main label.error small {
+  visibility: visible;
+  color: #eb3b3b;
 }/*# sourceMappingURL=main.css.map */

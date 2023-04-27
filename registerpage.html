@@ -5,15 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <script
+      src="https://kit.fontawesome.com/9385fe3313.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Document</title>
 </head>
 <body>
-    <header>
-      <div class="img">
-        <img src="./img/Logo.png" /><a href=""></a>
-        <p>Brainster</p>
+  <section id="sidemenu">
+      
+      
+      <div class="sidemenu">
+        <i class="fa-sharp fa-solid fa-xmark" id="closeButton" onclick="closeNav()"></i>
+      <a href="">Академија за маркетинг</a>
+      <a href="">Академија за програмирање</a>
+      <a href="">Академија за data science</a>
+      <a href="">Академија за дизајн</a>
+      <a href="registerpage.html" class="button">Вработи наш студент</a>
       </div>
-      <a href=""><i class="fa-solid fa-bars"></i></a>
+    </section>
+    <header>
+      <div class="img"><a href="index.html">
+        <img src="./img/Logo.png" />
+        <p>Brainster</p>
+        </a>
+      </div>
+      <button id="openButton" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
       <nav>
         <ul>
           <li>
@@ -39,40 +56,50 @@
 
       <a href="registerpage.html" class="button">Вработи наш студент</a>
     </header>
+
+
     <main>
         <h1>Вработи студенти</h1>
-        <form>
+        <form id="section">
             <section>
-        <label>Име и презиме
-        <input type="text" placeholder="Вашето име и презиме">
+        <label id="name">Име и презиме
+        <input type="text" placeholder="Вашето име и презиме" id="nameandsurname">
+         <small>Error messsage</small>
 </label>
-        <label>Име на компанија
-        <input type="text" placeholder="Име на вашата компанија">
+        <label id="company">Име на компанија
+        <input type="text"  placeholder="Име на вашата компанија"  id="companyName">
+         <small>Error messsage</small>
 </label>
-        <label>Контакт имејл
-        <input type="email" placeholder="контакт имејл на вашата компанија">
+        <label id="email">Контакт имејл
+        <input type="email"  placeholder="контакт имејл на вашата компанија"  id="email1">
+         <small>Error messsage</small>
 </label>
-        <label>Контакт телефон
-        <input type="text" placeholder="Контакт телефон на вашата компанија">
+        <label id="telephone">Контакт телефон
+        <input type="text"  placeholder="Контакт телефон на вашата компанија"  id="telephoneNumber">
+         <small>Error messsage</small>
             </label>
         <label>Тип на студент
             
-        <select>
-            <option selected disabled hidden >Избери тип на студент</option>
-            <option>Студенти од маркетинг</option>
-            <option>Студенти од програмирање</option>
-            <option>Студенти од data science</option>
-            <option>Студенти од дизајн</option>
-        </select></label>
+        <select class="cta-form" id="options">
+            <option selected hidden value="choose">Избери тип на студент</option>
+            <option value="Студенти од маркетинг">Студенти од маркетинг</option>
+            <option value="Студенти од програмирање">Студенти од програмирање</option>
+            <option value="Студенти од data science">Студенти од data science</option>
+            <option value="Студенти од дизајн">Студенти од дизајн</option>
+        </select>
+       <small>Error messsage</small></label>
         <label>
-        <input class="button" type="submit" placeholder="Испрати"></input>
+        <input class="button" type="submit" value="Испрати"></input>
         </label>
     </section>
         </form>
         
     </main>
+
+    
      <footer>
       <p>Изработено со ❤️ од студентите на Brainster</p>
     </footer>
+    <script src="index2.js"></script>
 </body>
 </html>

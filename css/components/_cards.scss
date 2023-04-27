@@ -4,12 +4,25 @@
 
 #cards {
   background-color: var.$background-color-primary;
-  padding:  0px 200px 200px;
+  padding:  0px 200px 100px 200px;
+  @include mix.laptop-s-styles {
+      padding: 0px 100px 100px 100px;
+    }
+         @include mix.tablet-styles {
+          padding: 0px 75px 100px 75px;
+         }
+         @include mix.tablet-s-styles {
+           padding: 0px 50px 70px 50px;
+         }
+        @include mix.mobile-l-styles {
+          padding: 0px 20px 70px 20px;
+        }
   h2{
     text-transform: capitalize;
     text-align: center;
     font-size: 40px;
     padding: 40px 0px;
+    
   }
   .Card-Wrapper {
     margin-right: -20px;
@@ -17,7 +30,24 @@
     flex-wrap: wrap;
     display: flex;
     .card {
+      display: none;
       width: 33.33%;
+      &:nth-child(1){
+        display: block;
+      }&:nth-child(2) {
+        display: block;
+      }&:nth-child(3) {
+        display: block;
+      }&:nth-child(4) {
+        display: block;
+      }
+      @include mix.tablet-styles{
+        width: 50%;
+      }
+            @include mix.tablet-s-styles {
+              width: 100%
+            }
+            
       
       &:hover{
         transform: translateY(-15px);
@@ -30,17 +60,39 @@
         background-color: white;
         border-radius: 10px;
         box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        @include mix.laptop-l-styles {
+            font-size: 13px;
+          }
+        
+          @include mix.laptop-s-styles {
+            font-size: 11px;
+          }
 
         img{
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
             display: block;
         }
-
+          h3{
+            @include mix.laptop-l-styles {
+                font-size: 15px;
+              }
+            
+              @include mix.laptop-s-styles {
+                font-size: 13px;
+              }
+          }
         .card-text {
           padding: 20px;
           & :not(:last-child){
             margin-bottom: 20px;
+            @include mix.laptop-l-styles {
+                margin-bottom: 10px;
+              }
+            
+              @include mix.laptop-s-styles {
+                margin-bottom: 10px;
+              }
           }
             & :last-of-type{
               @extend %boldtext;
@@ -49,14 +101,24 @@
           .a {
             display: flex;
             justify-content: right;
+            
             a {
               text-decoration: none;
-              background-color: red;
+              background-color: var.$button-color;
               padding: 10px 25px;
               color: white;
               border-radius: 5px;
               margin-top: 20px;
               display: inline-block;
+              @include mix.laptop-l-styles {
+                  margin-top: 10px;
+                  padding: 10px 20px;
+                }
+              
+                @include mix.laptop-s-styles {
+                  margin-top: 10px;
+                  padding: 10px 15px;
+                }
             }
           }
 
@@ -68,5 +130,25 @@
         }
       }
     }
+  }
+  
+  #button{
+    padding: 15px;
+    width: 50%;
+    display: none;
+    border-radius: 5px;
+    border: none;
+    background-color:var.$button-color ;
+    color: white;
+    margin: 20px auto 0px auto;
+    @include mix.tablet-styles {
+        display: block;
+        
+      }
+            
+@include mix.tablet-s-styles {
+  width: 70%;
+
+}
   }
 }

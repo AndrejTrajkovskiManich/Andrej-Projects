@@ -8,6 +8,7 @@
   background-size: cover;
   height: 50vh;
   background-position-y: 70%;
+  background-position: center;
   background-blend-mode: darken;
   display: flex;
   align-items: center;
@@ -15,5 +16,11 @@
   h1 {
     color: var.$text-color-primary;
     font-size: 80px;
+    @include mix.tablet-styles{
+      font-size: 50px;
+    }
+        @include mix.mobile-l-styles {
+          font-size: 40px;
+        }
   }
 }

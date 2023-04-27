@@ -1,0 +1,48 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+#sidemenu{
+    background-color: var.$background-color-secondary;
+    display: flex;
+    flex-direction: column;
+    top:0;
+    left:0;
+    transition: 0.5s ease-out;
+    height: 100%;
+    overflow-x: hidden;
+    z-index: 1;
+    position: fixed;
+     width: 0;
+    
+   
+.sidemenu{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    
+}
+    i{
+        font-size: 40px;
+        color: white;
+        align-self: flex-end;
+        margin-bottom: 40px;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+        align-self: flex-start;
+        &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+    }
+    .button{
+        padding:10px 20px ;
+        background-color: var.$button-color ;
+        align-self: flex-start;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    
+       
+}

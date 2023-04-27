@@ -12,12 +12,25 @@
   </head>
 
   <body>
-    <header>
-      <div class="img">
-        <img src="./img/Logo.png" /><a href=""></a>
-        <p>Brainster</p>
+    <section id="sidemenu">
+      
+      
+      <div class="sidemenu">
+        <i class="fa-sharp fa-solid fa-xmark" id="closeButton" onclick="closeNav()"></i>
+      <a href="">Академија за маркетинг</a>
+      <a href="">Академија за програмирање</a>
+      <a href="">Академија за data science</a>
+      <a href="">Академија за дизајн</a>
+      <a href="registerpage.html" class="button">Вработи наш студент</a>
       </div>
-      <a href=""><i class="fa-solid fa-bars"></i></a>
+    </section>
+    <header>
+      <div class="img"><a href="index.html">
+        <img src="./img/Logo.png" />
+        <p>Brainster</p>
+        </a>
+      </div>
+      <button id="openButton" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
       <nav>
         <ul>
           <li>
@@ -48,21 +61,21 @@
     </section>
     <section id="checkbox">
       
-      <label for="filter-coding">Проекти на студенти по академијата <br>за маркетинг
-      <input type="checkbox" id="filter-coding"></input>
+      <label for="filter-marketing" >Проекти на студенти по академијата <br>за маркетинг
+      <input type="checkbox" id="filter-marketing"></input>
     <i class="fa-sharp fa-solid fa-circle-check"></i>
   </label>
       
       
       
-      <label for="filter-marketing">Проекти на студенти по академијата <br>за програмирање
-      <input type="checkbox"id="filter-marketing"></input>
+      <label for="filter-coding" >Проекти на студенти по академијата <br>за програмирање
+      <input type="checkbox"id="filter-coding"></input>
     <i class="fa-sharp fa-solid fa-circle-check"></i>
   </label>
     
 
 
-    <label for="filter-design">Проекти на студенти по академијата<br> за дизајн
+    <label for="filter-design" >Проекти на студенти по академијата<br> за дизајн
     <input type="checkbox"id="filter-design"></input>
     <i class="fa-sharp fa-solid fa-circle-check"></i>
   </label>
@@ -334,8 +347,11 @@
       </div>
       </div>
       </div>
+      </div>
+      <button id="button">Прикажи повеќе</button>
+      
     </section>
-
+ 
     <footer>
       <p>Изработено со ❤️ од студентите на Brainster</p>
     </footer>
