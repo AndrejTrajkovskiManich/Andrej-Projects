@@ -1,0 +1,30 @@
+@import "../styles/variables";
+
+.footer {
+  text-align: center;
+  background-color: $background-color-secondary;
+  color: #fff;
+  padding: 50px 10%;
+  margin-top: auto;
+
+  p:first-child {
+    margin-bottom: 10px;
+  }
+
+  p:last-child {
+    font-size: 12px;
+  }
+  .facebook{
+    color: white;
+    background-color: $background-color-tertiary;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    &:not(:last-child){
+      margin-right: 10px;
+    }
+    display: inline-block;
+    text-decoration: none;
+&:hover{scale: 1.1;}
+  }
+}
